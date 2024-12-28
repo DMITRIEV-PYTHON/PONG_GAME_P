@@ -9,12 +9,16 @@ class Ball(arcade.Sprite):
     def __init__(self):
         super().__init__('ball.png', 0.1)
 
+    def draw(self):
+        pass
+
 
 class Bar(arcade.Sprite):
     def __init__(self):
         super().__init__('bar.png', 0.1)
 
-    #def draw(self):
+    def draw(self):
+        pass
 
 
 class Game(arcade.Window):
@@ -32,8 +36,8 @@ class Game(arcade.Window):
 
     def on_draw(self):
         self.clear((255, 255, 255))
+        self.ball.draw()
         self.bar.draw()
-
 
 if __name__ == '__main__':
     window = Game(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
