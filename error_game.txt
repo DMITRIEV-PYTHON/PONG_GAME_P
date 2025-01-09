@@ -1,0 +1,39 @@
+D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Scripts\python.exe D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\game_prepod.py
+Traceback (most recent call last):
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\game_prepod.py", line 85, in <module>
+    arcade.run()
+    ~~~~~~~~~~^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\arcade\window_commands.py", line 183, in run
+    pyglet.app.run(window._draw_rate)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\app\__init__.py", line 79, in run
+    event_loop.run(interval)
+    ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\app\base.py", line 164, in run
+    timeout = self.idle()
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\app\base.py", line 232, in idle
+    self.clock.call_scheduled_functions(dt)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\clock.py", line 217, in call_scheduled_functions
+    item.func(now - item.last_ts, *item.args, **item.kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\app\base.py", line 113, in _redraw_windows
+    window.draw(dt)
+    ~~~~~~~~~~~^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\window\__init__.py", line 697, in draw
+    self.dispatch_event('on_draw')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\window\__init__.py", line 671, in dispatch_event
+    super().dispatch_event(*args)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\event.py", line 373, in dispatch_event
+    raise e
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\.venv\Lib\site-packages\pyglet\event.py", line 368, in dispatch_event
+    if getattr(self, event_type)(*args):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "D:\PYTHON_2024\PythonProjectsForUniversity\PONG_GAME_P\game_prepod.py", line 65, in on_draw
+    self.bar.draw()
+    ^^^^^^^^^^^^^
+AttributeError: 'Bar' object has no attribute 'draw'
+
+Process finished with exit code 1
