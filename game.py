@@ -10,7 +10,7 @@ class Ball(arcade.Sprite):
         super().__init__('ball.png', 0.1)
 
     def draw(self):
-        pass
+        #pass
 
 
 class Bar(arcade.Sprite):

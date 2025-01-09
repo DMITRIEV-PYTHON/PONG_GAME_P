@@ -4,6 +4,7 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 SCREEN_TITLE = "PONG GAME"
 
+
 class Ball(arcade.Sprite):
     def __init__(self):
         super().__init__('ball.png', 0.1)  # Масштаб 0.1
@@ -28,6 +29,7 @@ class Ball(arcade.Sprite):
         if arcade.check_for_collision(self, bar):
             self.change_y *= -1  # Отражение мяча
 
+
 class Bar(arcade.Sprite):
     def __init__(self):
         # Убедитесь, что bar.png существует в том же каталоге
@@ -42,6 +44,7 @@ class Bar(arcade.Sprite):
             self.center_x -= self.speed
         if arcade.key.RIGHT in keys_pressed and self.right < SCREEN_WIDTH:
             self.center_x += self.speed
+
 
 class Game(arcade.Window):
     def __init__(self, width, height, title):
