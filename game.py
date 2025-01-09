@@ -2,7 +2,7 @@ import arcade
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-SCREEN_TITLE = "PONG GAME"
+SCREEN_TITLE = "PONG_GAME"
 
 
 class Ball(arcade.Sprite):
@@ -18,7 +18,7 @@ class Bar(arcade.Sprite):
         super().__init__('bar.png', 0.1)
 
     def draw(self):
-        pass
+        self.clear()
 
 
 class Game(arcade.Window):
@@ -38,6 +38,7 @@ class Game(arcade.Window):
         self.clear((255, 255, 255))
         self.ball.draw()
         self.bar.draw()
+
 
 if __name__ == '__main__':
     window = Game(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
